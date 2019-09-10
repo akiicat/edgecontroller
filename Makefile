@@ -162,7 +162,7 @@ ifeq ($(shell uname -s),Darwin)
 	minikube start
 else
 	sudo -E minikube start --vm-driver=none
-	sudo chown -R travis: $(HOME)/.minikube/
+	sudo chown -R $(USER): $(HOME)/.minikube/
 endif
 
 minikube-wait:
